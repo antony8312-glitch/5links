@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5Links | Digital, AI & Technology Enablement in Vietnam</title>
+  <meta name="description" content="5Links is a Vietnam-based technology and digital solutions platform focused on digitalization, advanced technologies, and AI adoption. Built by an international team with experience at Huawei, IBM, Inspur, and Oracle." />
+  <meta name="keywords" content="Vietnam digital transformation, AI Vietnam, technology solutions, data center, industrial digitalization, cloud, network, smart infrastructure, 5Links" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="apple-touch-icon" href="/assets/icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="5Links | Digital, AI & Technology Enablement in Vietnam" />
+  <meta property="og:description" content="A Vietnam-based technology and digital solutions platform enabling long-term digitalization and AI adoption." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://5links.vn/" />
+  <meta property="og:image" content="https://5links.vn/assets/icon.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="5Links | Digital, AI & Technology Enablement in Vietnam" />
+  <meta name="twitter:description" content="A Vietnam-based technology and digital solutions platform enabling long-term digitalization and AI adoption." />
+  <meta name="twitter:image" content="https://5links.vn/assets/icon.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://5links.vn/" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"5Links",
+    "legalName":"CÔNG TY TNHH CÔNG NGHỆ 5LINKS",
+    "url":"https://5links.vn/",
+    "logo":"https://5links.vn/assets/logo.png",
+    "description":"Vietnam-based technology and digital solutions platform focused on digitalization, advanced technologies and AI adoption.",
+    "sameAs":[],
+    "address":{
+      "@type":"PostalAddress",
+      "addressCountry":"VN"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0B1220;
+      --card:#0F1B33;
+      --text:#EAF0FF;
+      --muted:#A9B4D0;
+      --brand:#0A2A4F;
+      --accent:#3B82F6;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 5%, rgba(59,130,246,.35), transparent 50%),
+        radial-gradient(1200px 700px at 86% 20%, rgba(34,197,94,.18), transparent 55%),
+        radial-gradient(900px 700px at 55% 100%, rgba(168,85,247,.16), transparent 55%),
+        var(--bg);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,18,32,.55);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0; gap:14px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .brand img{height:34px;width:auto;display:block}
+    .navlinks{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center}
+    .navlinks a{color:var(--muted);font-weight:600;font-size:14px;padding:8px 10px;border-radius:10px}
+    .navlinks a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+    .actions{display:flex;align-items:center;gap:10px}
+    .lang{
+      display:flex;gap:6px;background:rgba(255,255,255,.06);
+      border:1px solid var(--border);border-radius:12px;padding:4px;
+    }
+    .lang button{
+      border:0;background:transparent;color:var(--muted);
+      padding:8px 10px;border-radius:10px;font-weight:700;font-size:12px;cursor:pointer;
+    }
+    .lang button.active{background:rgba(255,255,255,.10);color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:12px;font-weight:800;font-size:13px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      cursor:pointer;
+    }
+    .btn.primary{background:linear-gradient(135deg, rgba(59,130,246,.95), rgba(168,85,247,.75)); border:0}
+    .btn:hover{transform: translateY(-1px)}
+    .hero{padding:64px 0 28px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+    @media (max-width: 960px){.hero-grid{grid-template-columns:1fr} .brand{min-width:auto}}
+    .h1{
+      font-size:44px;line-height:1.05;margin:0 0 16px;font-weight:900;letter-spacing:-.02em;
+    }
+    @media (max-width: 520px){.h1{font-size:36px}}
+    .lead{color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 20px;max-width:66ch}
+    .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 22px}
+    .pill{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      padding:8px 10px;border-radius:999px;color:var(--text);
+      font-weight:800;font-size:12px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card{padding:18px}
+    .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+    .stat{padding:14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--border)}
+    .stat .k{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .stat .v{font-size:18px;font-weight:900;margin-top:6px}
+    section{padding:28px 0}
+    .section-title{font-size:22px;margin:0 0 10px;font-weight:900}
+    .section-lead{margin:0 0 18px;color:var(--muted);line-height:1.7}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width: 960px){.grid3{grid-template-columns:1fr}}
+    .feature{padding:18px}
+    .feature h3{margin:10px 0 8px;font-size:16px}
+    .feature p{margin:0;color:var(--muted);line-height:1.7}
+    .icon{
+      width:38px;height:38px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background:rgba(59,130,246,.14);
+      border:1px solid rgba(59,130,246,.25);
+    }
+    .icon svg{opacity:.95}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width: 960px){.split{grid-template-columns:1fr}}
+    .list{margin:0;padding:0;list-style:none}
+    .list li{padding:12px 0;border-bottom:1px solid var(--border);color:var(--muted);line-height:1.7}
+    .list strong{color:var(--text)}
+    .cta{padding:22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    footer{padding:26px 0 38px;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+    .tiny{font-size:12px}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid var(--border); background:rgba(255,255,255,.05);
+      color:var(--muted); font-weight:800; font-size:12px;
+    }
+    .form{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px
+    }
+    @media (max-width: 720px){.form{grid-template-columns:1fr}}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      outline:none;
+      font-weight:650;
+    }
+    textarea{min-height:110px;resize:vertical}
+    input::placeholder, textarea::placeholder{color:rgba(169,180,208,.75)}
+    .note{color:var(--muted);font-size:13px;line-height:1.6;margin-top:10px}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="5Links Home">
+        <img src="/assets/logo.png" alt="5Links logo" />
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#vision" data-i18n="nav.vision">Vision</a>
+        <a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a>
+        <a href="#team" data-i18n="nav.team">Team</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <div class="lang" role="group" aria-label="Language Switcher">
+          <button type="button" data-lang="en" class="active">EN</button>
+          <button type="button" data-lang="vi">VI</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+        <a class="btn primary" href="#contact" data-i18n="nav.cta">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="badge">
+            <span>●</span>
+            <span data-i18n="hero.badge">Vietnam-based • Global experience • Long-term partner</span>
+          </div>
+          <h1 class="h1" data-i18n="hero.h1">Connecting the “Five” for Vietnam’s Digital & AI Future</h1>
+          <p class="lead" data-i18n="hero.lead">
+            5Links is a technology and digital enablement platform in Vietnam. We help organizations build reliable, scalable systems by linking five critical layers: Energy, Network, Computing, Data and Intelligence.
+          </p>
+
+          <div class="pill-row" aria-label="Key focus">
+            <span class="pill" data-i18n="hero.p1">Digital Infrastructure</span>
+            <span class="pill" data-i18n="hero.p2">AI Enablement</span>
+            <span class="pill" data-i18n="hero.p3">Industrial Digitalization</span>
+            <span class="pill" data-i18n="hero.p4">Smart City & Utilities</span>
+            <span class="pill" data-i18n="hero.p5">Mission-Critical Projects</span>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="#contact" data-i18n="hero.primary">Start a conversation</a>
+            <a class="btn" href="#capabilities" data-i18n="hero.secondary">Explore capabilities</a>
+          </div>
+        </div>
+
+        <div class="card hero-card" aria-label="Quick facts">
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="/assets/icon.png" alt="5Links icon" style="width:46px;height:46px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.06)" />
+            <div>
+              <div style="font-weight:950;font-size:16px" data-i18n="facts.title">What “5” means</div>
+              <div style="color:var(--muted);font-size:13px;line-height:1.6" data-i18n="facts.subtitle">
+                Five connections that make complex systems work.
+              </div>
+            </div>
+          </div>
+
+          <div class="statgrid">
+            <div class="stat">
+              <div class="k" data-i18n="facts.k1">Energy</div>
+              <div class="v" data-i18n="facts.v1">Reliable power layer</div>
+            </div>
+            <div class="stat">
+              <div class="k" data-i18n="facts.k2">Network</div>
+              <div class="v" data-i18n="facts.v2">High-throughput links</div>
+            </div>
+            <div class="stat">
+              <div class="k" data-i18n="facts.k3">Computing</div>
+              <div class="v" data-i18n="facts.v3">Cloud & edge capability</div>
+            </div>
+            <div class="stat">
+              <div class="k" data-i18n="facts.k4">Data</div>
+              <div class="v" data-i18n="facts.v4">Sensing & governance</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px" class="stat">
+            <div class="k" data-i18n="facts.k5">Intelligence</div>
+            <div class="v" data-i18n="facts.v5">AI & robotics enablement</div>
+          </div>
+
+          <p class="note" data-i18n="facts.note">
+            Our product portfolio can evolve. What remains constant is our system thinking, engineering discipline, and local execution in Vietnam.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about.title">About 5Links</h2>
+      <p class="section-lead" data-i18n="about.lead">
+        We are built by an international team with long-term experience across Huawei, IBM, Inspur and Oracle, working on large-scale projects in multiple countries. We bring global best practices to Vietnam with practical local execution.
+      </p>
+
+      <div class="grid3">
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 data-i18n="about.c1t">Trustworthy by design</h3>
+          <p data-i18n="about.c1p">We prioritize reliability, compliance awareness, and long-term operability for mission-critical environments.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 data-i18n="about.c2t">Long-term mindset</h3>
+          <p data-i18n="about.c2p">We build capabilities, references, and partnerships that compound over time—beyond one-off transactions.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 12h3M17 12h3M12 4v3M12 17v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 data-i18n="about.c3t">Systems integration</h3>
+          <p data-i18n="about.c3p">We connect layers—from infrastructure to AI—so solutions remain scalable, maintainable, and efficient.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="container">
+      <div class="split">
+        <div class="card feature">
+          <h2 class="section-title" data-i18n="vision.title">Vision & Philosophy</h2>
+          <p class="section-lead" data-i18n="vision.lead">
+            Products may change. Principles should not. 5Links exists to link the five critical layers that make digital systems stable and future-ready.
+          </p>
+          <ul class="list">
+            <li><strong data-i18n="vision.l1b">Focus on Vietnam:</strong> <span data-i18n="vision.l1">deep local execution with global standards.</span></li>
+            <li><strong data-i18n="vision.l2b">Open ecosystem:</strong> <span data-i18n="vision.l2">partner-first model; best solution wins.</span></li>
+            <li><strong data-i18n="vision.l3b">Light-asset approach:</strong> <span data-i18n="vision.l3">low inventory, project-driven, efficient scaling.</span></li>
+            <li><strong data-i18n="vision.l4b">AI as a layer:</strong> <span data-i18n="vision.l4">upgrade projects from “usable” to “intelligent”.</span></li>
+          </ul>
+        </div>
+
+        <div class="card feature">
+          <h2 class="section-title" data-i18n="five.title">The Five Links</h2>
+          <p class="section-lead" data-i18n="five.lead">
+            Our name is a roadmap. We connect five layers to make complex projects deliver real outcomes.
+          </p>
+          <ul class="list">
+            <li><strong data-i18n="five.e">Energy:</strong> <span data-i18n="five.e2">power assurance for critical operations.</span></li>
+            <li><strong data-i18n="five.n">Network:</strong> <span data-i18n="five.n2">connectivity and high-performance transport.</span></li>
+            <li><strong data-i18n="five.c">Computing:</strong> <span data-i18n="five.c2">cloud, edge, and scalable infrastructure.</span></li>
+            <li><strong data-i18n="five.d">Data:</strong> <span data-i18n="five.d2">sensing, governance and usable data products.</span></li>
+            <li><strong data-i18n="five.i">Intelligence:</strong> <span data-i18n="five.i2">AI & robotics to automate and optimize.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities">
+    <div class="container">
+      <h2 class="section-title" data-i18n="cap.title">Capabilities (Product-agnostic)</h2>
+      <p class="section-lead" data-i18n="cap.lead">
+        We deliberately keep our portfolio flexible. Our value is the ability to evaluate, integrate and deliver solutions that fit Vietnam’s realities.
+      </p>
+
+      <div class="grid3">
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M3 7h18M7 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 7h14v14H7z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 data-i18n="cap.a1t">Solution architecture</h3>
+          <p data-i18n="cap.a1p">From requirements to system design, we define architecture that remains stable as projects scale.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v6M12 16v6M2 12h6M16 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 8l8 8M16 8l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 data-i18n="cap.a2t">Integration & delivery</h3>
+          <p data-i18n="cap.a2p">We coordinate partners, local vendors and stakeholders to deliver end-to-end outcomes.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 7h8M8 11h8M8 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 data-i18n="cap.a3t">Operations & lifecycle</h3>
+          <p data-i18n="cap.a3p">We emphasize long-term operations—monitoring, optimization, and reliable maintenance.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:14px" class="card cta">
+        <div>
+          <div style="font-weight:950;font-size:18px" data-i18n="cta.title">Looking for a reliable technology partner in Vietnam?</div>
+          <div style="color:var(--muted);margin-top:6px;line-height:1.6" data-i18n="cta.lead">
+            Tell us your scenario. We’ll propose an approach and the right partner ecosystem.
+          </div>
+        </div>
+        <a class="btn primary" href="#contact" data-i18n="cta.button">Contact 5Links</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <h2 class="section-title" data-i18n="team.title">Team</h2>
+      <p class="section-lead" data-i18n="team.lead">
+        Our founding team includes 3 Chinese and 1 Vietnamese partner, with long-term experience across global technology leaders and multi-country project delivery.
+      </p>
+
+      <div class="split">
+        <div class="card feature">
+          <h3 data-i18n="team.h1">Global experience</h3>
+          <ul class="list">
+            <li data-i18n="team.li1">Long-term work experience across multiple countries and regions.</li>
+            <li data-i18n="team.li2">Background from Huawei, IBM, Inspur, Oracle and enterprise ecosystems.</li>
+            <li data-i18n="team.li3">Hands-on delivery mindset: architecture, integration, operations.</li>
+          </ul>
+        </div>
+        <div class="card feature">
+          <h3 data-i18n="team.h2">Local execution in Vietnam</h3>
+          <ul class="list">
+            <li data-i18n="team.li4">Vietnam-first delivery: compliance awareness and local partner network.</li>
+            <li data-i18n="team.li5">Project-based engagement with a light-asset operating model.</li>
+            <li data-i18n="team.li6">Flexible portfolio: add/remove products as scenarios evolve.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+      <p class="section-lead" data-i18n="contact.lead">
+        Share your scenario (data center, industrial digitalization, utilities, smart infrastructure). We’ll get back with a clear next step.
+      </p>
+
+      <div class="card feature">
+        <div class="form" role="form" aria-label="Contact form">
+          <input id="name" placeholder="Name / Company" data-i18n-ph="contact.ph1" />
+          <input id="email" placeholder="Email / WeChat / Phone" data-i18n-ph="contact.ph2" />
+          <textarea id="message" placeholder="Tell us about your needs..." data-i18n-ph="contact.ph3"></textarea>
+          <div>
+            <button class="btn primary" type="button" onclick="sendMail()" data-i18n="contact.send">Send</button>
+            <p class="note" data-i18n="contact.note">
+              This form uses your email client (mailto). If you prefer, replace it with your backend or a form service later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="tiny">
+        <div style="font-weight:900;color:var(--text)">CÔNG TY TNHH CÔNG NGHỆ 5LINKS</div>
+        <div>© <span id="year"></span> 5Links. <span data-i18n="footer.rights">All rights reserved.</span></div>
+      </div>
+      <div class="tiny">
+        <span class="badge">5links.vn</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const I18N = {
+    en: {
+      "nav.about":"About","nav.vision":"Vision","nav.capabilities":"Capabilities","nav.team":"Team","nav.contact":"Contact","nav.cta":"Talk to us",
+      "hero.badge":"Vietnam-based • Global experience • Long-term partner",
+      "hero.h1":"Connecting the “Five” for Vietnam’s Digital & AI Future",
+      "hero.lead":"5Links is a technology and digital enablement platform in Vietnam. We help organizations build reliable, scalable systems by linking five critical layers: Energy, Network, Computing, Data and Intelligence.",
+      "hero.p1":"Digital Infrastructure","hero.p2":"AI Enablement","hero.p3":"Industrial Digitalization","hero.p4":"Smart City & Utilities","hero.p5":"Mission-Critical Projects",
+      "hero.primary":"Start a conversation","hero.secondary":"Explore capabilities",
+      "facts.title":"What “5” means","facts.subtitle":"Five connections that make complex systems work.",
+      "facts.k1":"Energy","facts.v1":"Reliable power layer",
+      "facts.k2":"Network","facts.v2":"High-throughput links",
+      "facts.k3":"Computing","facts.v3":"Cloud & edge capability",
+      "facts.k4":"Data","facts.v4":"Sensing & governance",
+      "facts.k5":"Intelligence","facts.v5":"AI & robotics enablement",
+      "facts.note":"Our product portfolio can evolve. What remains constant is our system thinking, engineering discipline, and local execution in Vietnam.",
+      "about.title":"About 5Links",
+      "about.lead":"We are built by an international team with long-term experience across Huawei, IBM, Inspur and Oracle, working on large-scale projects in multiple countries. We bring global best practices to Vietnam with practical local execution.",
+      "about.c1t":"Trustworthy by design","about.c1p":"We prioritize reliability, compliance awareness, and long-term operability for mission-critical environments.",
+      "about.c2t":"Long-term mindset","about.c2p":"We build capabilities, references, and partnerships that compound over time—beyond one-off transactions.",
+      "about.c3t":"Systems integration","about.c3p":"We connect layers—from infrastructure to AI—so solutions remain scalable, maintainable, and efficient.",
+      "vision.title":"Vision & Philosophy",
+      "vision.lead":"Products may change. Principles should not. 5Links exists to link the five critical layers that make digital systems stable and future-ready.",
+      "vision.l1b":"Focus on Vietnam:","vision.l1":"deep local execution with global standards.",
+      "vision.l2b":"Open ecosystem:","vision.l2":"partner-first model; best solution wins.",
+      "vision.l3b":"Light-asset approach:","vision.l3":"low inventory, project-driven, efficient scaling.",
+      "vision.l4b":"AI as a layer:","vision.l4":"upgrade projects from “usable” to “intelligent”.",
+      "five.title":"The Five Links",
+      "five.lead":"Our name is a roadmap. We connect five layers to make complex projects deliver real outcomes.",
+      "five.e":"Energy:","five.e2":"power assurance for critical operations.",
+      "five.n":"Network:","five.n2":"connectivity and high-performance transport.",
+      "five.c":"Computing:","five.c2":"cloud, edge, and scalable infrastructure.",
+      "five.d":"Data:","five.d2":"sensing, governance and usable data products.",
+      "five.i":"Intelligence:","five.i2":"AI & robotics to automate and optimize.",
+      "cap.title":"Capabilities (Product-agnostic)",
+      "cap.lead":"We deliberately keep our portfolio flexible. Our value is the ability to evaluate, integrate and deliver solutions that fit Vietnam’s realities.",
+      "cap.a1t":"Solution architecture","cap.a1p":"From requirements to system design, we define architecture that remains stable as projects scale.",
+      "cap.a2t":"Integration & delivery","cap.a2p":"We coordinate partners, local vendors and stakeholders to deliver end-to-end outcomes.",
+      "cap.a3t":"Operations & lifecycle","cap.a3p":"We emphasize long-term operations—monitoring, optimization, and reliable maintenance.",
+      "cta.title":"Looking for a reliable technology partner in Vietnam?",
+      "cta.lead":"Tell us your scenario. We’ll propose an approach and the right partner ecosystem.",
+      "cta.button":"Contact 5Links",
+      "team.title":"Team",
+      "team.lead":"Our founding team includes 3 Chinese and 1 Vietnamese partner, with long-term experience across global technology leaders and multi-country project delivery.",
+      "team.h1":"Global experience",
+      "team.li1":"Long-term work experience across multiple countries and regions.",
+      "team.li2":"Background from Huawei, IBM, Inspur, Oracle and enterprise ecosystems.",
+      "team.li3":"Hands-on delivery mindset: architecture, integration, operations.",
+      "team.h2":"Local execution in Vietnam",
+      "team.li4":"Vietnam-first delivery: compliance awareness and local partner network.",
+      "team.li5":"Project-based engagement with a light-asset operating model.",
+      "team.li6":"Flexible portfolio: add/remove products as scenarios evolve.",
+      "contact.title":"Contact",
+      "contact.lead":"Share your scenario (data center, industrial digitalization, utilities, smart infrastructure). We’ll get back with a clear next step.",
+      "contact.ph1":"Name / Company",
+      "contact.ph2":"Email / WeChat / Phone",
+      "contact.ph3":"Tell us about your needs...",
+      "contact.send":"Send",
+      "contact.note":"This form uses your email client (mailto). If you prefer, replace it with your backend or a form service later.",
+      "footer.rights":"All rights reserved."
+    },
+    vi: {
+      "nav.about":"Giới thiệu","nav.vision":"Tầm nhìn","nav.capabilities":"Năng lực","nav.team":"Đội ngũ","nav.contact":"Liên hệ","nav.cta":"Trao đổi",
+      "hero.badge":"Tại Việt Nam • Kinh nghiệm quốc tế • Đối tác dài hạn",
+      "hero.h1":"Kết nối “Năm” lớp cho tương lai Số hoá & AI tại Việt Nam",
+      "hero.lead":"5Links là nền tảng công nghệ và thúc đẩy số hoá tại Việt Nam. Chúng tôi giúp tổ chức xây dựng hệ thống ổn định, mở rộng được bằng cách liên kết 5 lớp then chốt: Năng lượng, Mạng, Tính toán, Dữ liệu và Trí tuệ.",
+      "hero.p1":"Hạ tầng số","hero.p2":"AI Enablement","hero.p3":"Số hoá công nghiệp","hero.p4":"Thành phố & tiện ích thông minh","hero.p5":"Dự án trọng yếu",
+      "hero.primary":"Kết nối với chúng tôi","hero.secondary":"Xem năng lực",
+      "facts.title":"“5” có nghĩa gì","facts.subtitle":"Năm kết nối giúp hệ thống phức tạp vận hành.",
+      "facts.k1":"Năng lượng","facts.v1":"Lớp đảm bảo nguồn điện",
+      "facts.k2":"Mạng","facts.v2":"Liên kết băng thông cao",
+      "facts.k3":"Tính toán","facts.v3":"Năng lực cloud & edge",
+      "facts.k4":"Dữ liệu","facts.v4":"Cảm biến & quản trị dữ liệu",
+      "facts.k5":"Trí tuệ","facts.v5":"AI & robot",
+      "facts.note":"Danh mục sản phẩm có thể thay đổi. Điều không đổi là tư duy hệ thống, kỷ luật kỹ thuật và triển khai tại Việt Nam.",
+      "about.title":"Về 5Links",
+      "about.lead":"Chúng tôi được xây dựng bởi đội ngũ có kinh nghiệm dài hạn tại Huawei, IBM, Inspur và Oracle, từng tham gia dự án quy mô lớn ở nhiều quốc gia. 5Links mang thực tiễn tốt nhất toàn cầu đến Việt Nam với năng lực triển khai địa phương.",
+      "about.c1t":"Đáng tin cậy từ thiết kế","about.c1p":"Ưu tiên độ ổn định, nhận thức tuân thủ và khả năng vận hành dài hạn cho môi trường trọng yếu.",
+      "about.c2t":"Tư duy dài hạn","about.c2p":"Xây năng lực, dự án tham chiếu và quan hệ đối tác để tăng trưởng bền vững.",
+      "about.c3t":"Tích hợp hệ thống","about.c3p":"Kết nối các lớp—from hạ tầng đến AI—để giải pháp mở rộng và bảo trì dễ dàng.",
+      "vision.title":"Tầm nhìn & Triết lý",
+      "vision.lead":"Sản phẩm có thể đổi. Nguyên tắc thì không. 5Links kết nối 5 lớp quan trọng để hệ thống số ổn định và sẵn sàng cho tương lai.",
+      "vision.l1b":"Tập trung Việt Nam:","vision.l1":"triển khai sâu tại địa phương theo chuẩn toàn cầu.",
+      "vision.l2b":"Hệ sinh thái mở:","vision.l2":"ưu tiên đối tác; giải pháp tốt nhất chiến thắng.",
+      "vision.l3b":"Vận hành nhẹ:","vision.l3":"ít tồn kho, theo dự án, mở rộng hiệu quả.",
+      "vision.l4b":"AI như một lớp:","vision.l4":"nâng dự án từ “dùng được” lên “thông minh”.",
+      "five.title":"Năm lớp kết nối",
+      "five.lead":"Tên gọi là lộ trình. Chúng tôi kết nối 5 lớp để dự án tạo ra kết quả thực.",
+      "five.e":"Năng lượng:","five.e2":"đảm bảo nguồn điện cho vận hành trọng yếu.",
+      "five.n":"Mạng:","five.n2":"kết nối và truyền dẫn hiệu năng cao.",
+      "five.c":"Tính toán:","five.c2":"cloud, edge và hạ tầng mở rộng.",
+      "five.d":"Dữ liệu:","five.d2":"cảm biến, quản trị và sản phẩm dữ liệu.",
+      "five.i":"Trí tuệ:","five.i2":"AI & robot để tự động hoá và tối ưu.",
+      "cap.title":"Năng lực (không phụ thuộc sản phẩm)",
+      "cap.lead":"Chúng tôi chủ động giữ danh mục linh hoạt. Giá trị nằm ở khả năng đánh giá, tích hợp và triển khai giải pháp phù hợp thực tế Việt Nam.",
+      "cap.a1t":"Kiến trúc giải pháp","cap.a1p":"Từ yêu cầu đến thiết kế, chúng tôi định nghĩa kiến trúc ổn định khi dự án mở rộng.",
+      "cap.a2t":"Tích hợp & triển khai","cap.a2p":"Điều phối đối tác, nhà thầu địa phương và các bên liên quan để giao kết quả đầu-cuối.",
+      "cap.a3t":"Vận hành vòng đời","cap.a3p":"Nhấn mạnh vận hành dài hạn—giám sát, tối ưu và bảo trì tin cậy.",
+      "cta.title":"Bạn cần một đối tác công nghệ tin cậy tại Việt Nam?",
+      "cta.lead":"Cho chúng tôi biết bối cảnh. 5Links sẽ đề xuất cách tiếp cận và hệ sinh thái đối tác phù hợp.",
+      "cta.button":"Liên hệ 5Links",
+      "team.title":"Đội ngũ",
+      "team.lead":"Nhóm sáng lập gồm 3 đối tác Trung Quốc và 1 đối tác Việt Nam, với kinh nghiệm dài hạn tại các tập đoàn công nghệ và triển khai đa quốc gia.",
+      "team.h1":"Kinh nghiệm quốc tế",
+      "team.li1":"Làm việc dài hạn tại nhiều quốc gia/khu vực.",
+      "team.li2":"Kinh nghiệm từ Huawei, IBM, Inspur, Oracle và hệ sinh thái doanh nghiệp.",
+      "team.li3":"Tư duy thực chiến: kiến trúc, tích hợp, vận hành.",
+      "team.h2":"Triển khai tại Việt Nam",
+      "team.li4":"Ưu tiên Việt Nam: tuân thủ và mạng lưới đối tác địa phương.",
+      "team.li5":"Hợp tác theo dự án với mô hình vận hành nhẹ.",
+      "team.li6":"Danh mục linh hoạt: thêm/bớt theo bối cảnh.",
+      "contact.title":"Liên hệ",
+      "contact.lead":"Chia sẻ bối cảnh (data center, số hoá công nghiệp, tiện ích, hạ tầng thông minh). Chúng tôi sẽ phản hồi bước tiếp theo rõ ràng.",
+      "contact.ph1":"Tên / Công ty",
+      "contact.ph2":"Email / Zalo / SĐT / WeChat",
+      "contact.ph3":"Nhu cầu của bạn...",
+      "contact.send":"Gửi",
+      "contact.note":"Mẫu này mở email client (mailto). Bạn có thể thay bằng backend hoặc dịch vụ form sau.",
+      "footer.rights":"Đã đăng ký bản quyền."
+    },
+    zh: {
+      "nav.about":"关于我们","nav.vision":"理念方向","nav.capabilities":"能力","nav.team":"团队","nav.contact":"联系","nav.cta":"联系沟通",
+      "hero.badge":"立足越南 • 国际化经验 • 长期伙伴",
+      "hero.h1":"连接“5”，服务越南数字化与AI未来",
+      "hero.lead":"5Links 是一家立足越南的科技与数字化服务平台。我们通过连接五个关键层：能源、网络、算力、数据与智能，帮助客户构建稳定、可扩展、面向未来的系统。",
+      "hero.p1":"数字基础设施","hero.p2":"AI赋能","hero.p3":"工业数字化","hero.p4":"智慧城市与公用事业","hero.p5":"关键基础设施项目",
+      "hero.primary":"开始沟通","hero.secondary":"了解能力",
+      "facts.title":"“5”代表什么","facts.subtitle":"让复杂系统真正运转的五个关键连接。",
+      "facts.k1":"能源","facts.v1":"关键业务电力保障",
+      "facts.k2":"网络","facts.v2":"高带宽低时延连接",
+      "facts.k3":"算力","facts.v3":"云与边缘能力",
+      "facts.k4":"数据","facts.v4":"感知、治理与可用数据",
+      "facts.k5":"智能","facts.v5":"AI 与机器人赋能",
+      "facts.note":"产品组合可以变化，但不变的是系统思维、工程纪律与越南本地落地能力。",
+      "about.title":"关于 5Links",
+      "about.lead":"我们由拥有长期国际化经验的团队发起，成员来自华为、IBM、浪潮、Oracle 等企业，并在多个国家参与大型数字化项目实践。我们将全球最佳实践带到越南，并以本地化方式落地。",
+      "about.c1t":"可信赖的工程标准","about.c1p":"面向关键场景，强调稳定性、合规意识与长期可运维。",
+      "about.c2t":"长期主义","about.c2p":"不做一次性交易，持续积累能力、案例与生态伙伴。",
+      "about.c3t":"系统级整合","about.c3p":"把基础设施到AI的各层连接起来，确保可扩展、可维护、有效率。",
+      "vision.title":"发展方向与理念",
+      "vision.lead":"产品会变，原则不变。5Links 的核心是把五个关键层正确连接，让系统稳定并可持续演进。",
+      "vision.l1b":"立足越南：","vision.l1":"以本地执行力承接全球标准。",
+      "vision.l2b":"开放生态：","vision.l2":"以伙伴协作为核心，选择最优解。",
+      "vision.l3b":"轻资产模式：","vision.l3":"低库存、项目驱动、效率扩张。",
+      "vision.l4b":"AI作为一层：","vision.l4":"让项目从“可用”走向“智能”。",
+      "five.title":"五个关键连接",
+      "five.lead":"名字就是路线图。我们连接五个层级，确保项目形成长期成果。",
+      "five.e":"能源：","five.e2":"关键业务的电力与连续性保障。",
+      "five.n":"网络：","five.n2":"连接与传输能力，支持高性能业务。",
+      "five.c":"算力：","five.c2":"云/边缘/基础设施的可扩展能力。",
+      "five.d":"数据：","five.d2":"采集、治理与可用数据产品。",
+      "five.i":"智能：","five.i2":"AI/机器人实现自动化与优化。",
+      "cap.title":"能力（不绑定具体产品）",
+      "cap.lead":"我们刻意保持产品组合的灵活性。我们的价值在于评估、整合与交付真正适配越南需求的解决方案。",
+      "cap.a1t":"方案与架构","cap.a1p":"从需求到系统设计，保证架构稳定且可扩展。",
+      "cap.a2t":"整合与交付","cap.a2p":"协调伙伴与本地资源，实现端到端落地。",
+      "cap.a3t":"运维与生命周期","cap.a3p":"强调长期运维：监控、优化与可靠维护。",
+      "cta.title":"正在越南寻找长期可信赖的技术伙伴？",
+      "cta.lead":"告诉我们你的场景，我们给出清晰的下一步与合适的伙伴生态。",
+      "cta.button":"联系 5Links",
+      "team.title":"团队",
+      "team.lead":"创始团队由 3 位中国合伙人和 1 位越南合伙人组成，拥有国际大厂与多国项目经验。",
+      "team.h1":"国际化经验",
+      "team.li1":"长期在多个国家/地区工作与交付。",
+      "team.li2":"来自华为、IBM、浪潮、Oracle 等生态背景。",
+      "team.li3":"实战导向：架构、集成、运维。",
+      "team.h2":"越南本地落地",
+      "team.li4":"越南优先：合规意识与本地伙伴网络。",
+      "team.li5":"项目制合作 + 轻资产运营。",
+      "team.li6":"产品组合可增可减，能力长期沉淀。",
+      "contact.title":"联系",
+      "contact.lead":"欢迎描述你的场景（数据中心、工业数字化、公用事业、智慧基础设施等），我们会给出明确的下一步。",
+      "contact.ph1":"姓名 / 公司",
+      "contact.ph2":"邮箱 / 微信 / 电话",
+      "contact.ph3":"请简要描述你的需求...",
+      "contact.send":"发送",
+      "contact.note":"当前使用 mailto 调用本地邮箱客户端。后续可替换为后端接口或表单服务。",
+      "footer.rights":"版权所有。"
+    }
+  };
+
+  function detectLang(){
+    const saved = localStorage.getItem("lang");
+    if(saved && I18N[saved]) return saved;
+    const nav = (navigator.language || "en").toLowerCase();
+    if(nav.startsWith("vi")) return "vi";
+    if(nav.startsWith("zh")) return "zh";
+    return "en";
+  }
+
+  function setLang(lang){
+    if(!I18N[lang]) lang = "en";
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.getAttribute("data-i18n");
+      const val = I18N[lang][key];
+      if(val) el.textContent = val;
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+      const key = el.getAttribute("data-i18n-ph");
+      const val = I18N[lang][key];
+      if(val) el.setAttribute("placeholder", val);
+    });
+    document.querySelectorAll(".lang button").forEach(b=>{
+      b.classList.toggle("active", b.getAttribute("data-lang")===lang);
+    });
+
+    // Update title/description for basic SEO (client-side)
+    if(lang==="vi"){
+      document.title = "5Links | Nền tảng số hoá & AI tại Việt Nam";
+    } else if(lang==="zh"){
+      document.title = "5Links｜服务越南数字化与AI的科技平台";
+    } else {
+      document.title = "5Links | Digital, AI & Technology Enablement in Vietnam";
+    }
+  }
+
+  document.querySelectorAll(".lang button").forEach(b=>{
+    b.addEventListener("click", ()=>setLang(b.getAttribute("data-lang")));
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function sendMail(){
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const subject = encodeURIComponent("5Links Inquiry - " + (name || "New message"));
+    const body = encodeURIComponent(
+      "Name/Company: " + (name||"") + "\n" +
+      "Contact: " + (email||"") + "\n\n" +
+      "Message:\n" + (message||"")
+    );
+    // TODO: replace with your real inbox
+    const to = "contact@5links.vn";
+    window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+  }
+</script>
+</body>
+</html>
