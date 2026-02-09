@@ -85,6 +85,23 @@
     .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
     .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.05);font-weight:850;font-size:12px}
   </style>
+
+<style>
+/* Hero background (abstract network) */
+.hero{
+  background:
+    linear-gradient(180deg, rgba(11,18,32,.86) 0%, rgba(11,18,32,.66) 45%, rgba(11,18,32,.86) 100%),
+    url('/assets/hero-bg-network.svg') center right / cover no-repeat;
+}
+@media (max-width: 768px){
+  .hero{
+    background:
+      linear-gradient(180deg, rgba(11,18,32,.92), rgba(11,18,32,.92)),
+      url('/assets/hero-bg-network.svg') center / cover no-repeat;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
